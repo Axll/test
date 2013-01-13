@@ -1,0 +1,33 @@
+<%= form_for(@voorstel) do |f| %>
+  <% if @voorstel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@voorstel.errors.count, "error") %> prohibited this voorstel from being saved:</h2>
+
+      <ul>
+      <% @voorstel.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.hidden_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :place %><br />
+    <%= f.text_field :place %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br />
+    <%= f.text_field :time %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

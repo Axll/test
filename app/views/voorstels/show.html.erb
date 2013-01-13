@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @voorstel.name %>
+</p>
+
+<p>
+  <b>Place:</b>
+  <%= @voorstel.place %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @voorstel.time %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @voorstel.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_voorstel_path(@voorstel) %> |
+<%= link_to 'Back', voorstels_path %>

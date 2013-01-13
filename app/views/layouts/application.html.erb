@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+
+<title>Paris</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+<!-- Google font -->
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+
+<!-- JQuery ui -->
+<!-- <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script>
+    $(function() {
+        $( "#tabs" ).tabs();
+    });
+</script>
+
+<!-- Bootstrap -->
+<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript">
+
+    $('.carousel').carousel('cycle'){
+    interval: 2000
+    })
+
+</script>
+
+</head>
+
+<body>
+
+	<div class="navbar navbar-fixed-top navbar-inverse">
+	    <div id="nav" class="navbar-inner">
+	    	<div class="container-fluid">
+	    		<div class="row-fluid">
+		    		<!-- <div class="span3"></div> -->
+		    		<div class="span12">
+					    <%= link_to "Explorer", home_index_path, :class => 'brand' %>
+					    <ul class="nav">
+							<% if user_signed_in? %>
+						    	<li><%= link_to current_user.first_name, edit_user_registration_path %></li>
+						    	<li><%= link_to "Log out", logout_path %></li>
+					    	<% else %>
+					    		<li><%= link_to "Register", register_path %></li>
+					    		<li><%= link_to "Log in", login_path %></li>
+					    	<% end %>					    
+					    </ul>
+					</div>
+				</div>
+		    </div>
+	    </div>
+    </div>
+
+	<div class="container-fluid">
+
+		<div id="header" class="row-fluid">
+			<div class="span12">
+			    <div id="myCarousel" class="carousel slide">
+					<!-- Carousel items -->
+					<div class="carousel-inner">
+						<div class="active item"><%=image_tag "/assets/parijs.jpg"%></div>
+						<div class="item"><%=image_tag "/assets/parijs2.jpg"%></div>
+						<div class="item"><%=image_tag "/assets/parijs3.jpg"%></div>
+				    </div>
+				    <!-- Carousel nav -->
+				    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+				    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+				    </div>
+				</div>	
+			</div>
+
+			<div id="content" class="row-fluid">
+				<div class="span3">
+					<div class="form">
+
+						<% if user_signed_in? %>
+							<ul>
+								<li class="name">Welkom, <%= current_user.full_name %></li>
+								<li><%= link_to "Voorstellen", voorstels_path %></li>
+								<li><%= link_to "Account instellingen", edit_user_registration_path %></li>
+								<li><%= link_to "Logout", logout_path %></li>
+							</ul>
+						<% else %>
+							<h2>Login</h2>
+							<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+
+								<div><%= f.label :email %>
+								<%= f.email_field :email %></div>
+
+								<div><%= f.label :password %>
+								<%= f.password_field :password %></div>
+
+								<div><%= f.submit "Sign in", :class =>'btn btn-small btn-inverse' %></div>
+								<% end %>
+
+							<%= render "devise/shared/links" %>
+						<% end %>
+					</div>
+					<!-- <div class="info">
+						<p>
+							Indien u vragen heeft in verband met de planning of het ontwerp kan u mij altijd bereiken op mijn nummer -- te vinden in uw GSM onder de naam lieveken / schatteken / mijn ventsjen -- of door het volgende e-mail adres: <a href="mailto:huts.axel@gmail.com">huts.axel@gmail.com</a> ^^
+						</p>
+						<p>
+							Deze site is alleen maar getest in firefox, chrome en safari! :)
+						</p>
+					</div> -->
+				</div> 
+				<div class="span9">
+
+				<%= yield %>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="row-fluid container-fluid">
+			<div class="span12">
+				<p>dfgsdfgdsfg</p>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

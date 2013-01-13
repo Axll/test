@@ -1,0 +1,338 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+body, html{
+	height: 100%;
+}
+
+body, #wrapper, #tabs, #tabs-1, #tabs-2, #tabs-3 {
+	font-weight: 400;
+	font-family: 'Raleway', sans-serif;
+	font-size: 0.92em;
+	padding: 0;
+	margin: 0;
+}
+
+*:focus {
+    outline:none;
+}
+
+.img{
+	width: 221px;
+}
+
+h1{
+	text-align: left;
+	padding:10px 0;
+	color: #FFB200;
+}
+
+.container-fluid{
+	max-width: 940px;
+	margin: 0 auto;
+}
+
+.container{
+	padding-top: 40px;
+}
+
+.navbar .container{
+	padding-top: 0px;
+}
+
+.name{
+
+}
+
+#myCarousel{
+	height: 300px;
+	overflow: hidden;
+}
+
+	#banner img{
+		margin-top: -70px;
+	}
+
+
+/*
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+									Header
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+*/
+
+#header{
+	padding-top: 40px;
+}
+
+/*
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+									Tabssssss
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+*/
+
+
+#tabs{
+	background-image: none;
+	border: none;
+	margin: -10px 0 0 0;
+	padding: 0;
+}
+
+	#tabs ul{
+		background-image: none;
+		border: none;
+	}
+
+	#tabs ul li{
+		list-style-type: none;
+		text-align: center;
+		padding: 0;
+		margin: 0;
+		background-image: none;
+		
+	}
+
+	#tabs a{
+		padding: 0;
+		color: #505050;
+		padding-bottom: 10px;
+		font-size: 1.15em;
+	}
+
+	#tabs a:hover{
+		text-decoration: none;
+		color: #FFB200;
+	}
+
+	#tabs .block{
+		height: auto;
+		overflow: hidden;
+	}
+
+	#tabs #image{
+		padding: 0;
+		margin: 0;
+		height: 120px;
+		overflow: hidden;
+	}
+
+	#tabs #text{
+		background-image: none;
+		background-color: #252525;
+		padding:10px 0;
+	}
+
+#tabs-1, #tabs-2, #tabs-3 {
+	padding: 10px 25px;
+	margin: 0;
+}
+
+	#tabs .todo li{
+		list-style-type: disc;
+	}
+
+		#tabs .todo .todoli{
+			
+		}
+
+
+.ui-tabs-active{
+	background-color: #FFB200;
+}
+
+.ui-state-active{
+	color: #505050;
+	background-color: #FFB200;
+}
+
+.removemargin{
+	margin:0;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+									Nav
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+*/
+
+
+
+#nav a{
+	color: #505050;
+}
+
+#nav .nav{
+	font-weight: 400;
+	font-family: 'Raleway', sans-serif;
+}
+
+#nav.nav .active{
+	color: #505050;
+}
+
+.form{
+	
+}
+
+	.form ul{
+		margin:0px;
+		border-radius: 0 5px 5px 0px;
+		-moz-border-radius: 0 5px 5px 0px;
+		-webkit-border-radius: 0 5px 5px 0px;
+		text-align: left;
+		background-color: #252525;
+	}
+
+	.form li{
+		list-style-type: none;
+		font-weight: 400;
+		font-family: 'Raleway', sans-serif;
+		border-left: 5px solid #505050;
+		padding: 5px 0 5px 10px;
+	}
+
+		.form li:hover{
+			border-left: 5px solid #FFB200;
+		}
+
+		.form li:hover a{
+			color: #FFB200;
+		}
+
+		.form a{
+			color: #505050;
+			text-decoration: none;
+		}
+
+		.form a:hover{
+			color: #FFB200;
+			text-decoration: none;
+			background-color: transparent;
+		}
+
+	.form .name{
+		color: #FFB200;; 
+		border-left: 5px solid #FFB200;
+	}
+
+
+legend{
+	color: #FFB200;
+}
+
+/*
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+									Content
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+*/
+
+/*Voorstellen table*/
+.newvoorstel:hover{
+	color: #FFB200;
+	text-decoration: none;
+	background-color: transparent;	
+}
+
+.voorstellen{
+	margin-bottom: 10px;
+	border-radius: 7px;
+	border: 3px solid #303030;
+	padding: 10px 0;
+	background-color: #252525;
+	color: #CCC;
+	text-align: center;
+}
+
+	.voorstellen:hover .linkvoorstellen{
+		display: inline;
+	}
+
+	.voorstellen .linkvoorstellen{
+		color: #FFB200;
+		display: none;
+	}
+
+	.voorstellen a{
+		color: #FFB200;
+	}
+
+		.voorstellen a:hover{
+			color: #FFB200;
+			text-decoration: none;
+			background-color: transparent;
+		}
+
+	.voorstellen th{
+		color: #FFB200;
+	}
+
+	.voorstellen td{
+		width: 25%;
+	}
+
+.field{
+	width: 100%;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+									Footer
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+*/
+
+#footer{
+	margin-top: 20px;
+	background-color: #151515;
+	min-height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
