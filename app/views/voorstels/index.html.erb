@@ -20,9 +20,9 @@
       <td><%= voorstel.content %></td>
     </tr>
     <tr colspan="4">
-      <td><%= link_to 'Show', voorstel, :class => "linkvoorstellen" %>
-          <%= link_to 'Edit', edit_voorstel_path(voorstel), :class => "linkvoorstellen" %>
-          <%= link_to 'Destroy', voorstel, method: :delete, data: { confirm: 'Are you sure?' }, :class => "linkvoorstellen" %>
+      <td><%= link_to 'Toon', voorstel, :class => "linkvoorstellen" %>
+          <%= link_to 'Wijzig', edit_voorstel_path(voorstel), :class => "linkvoorstellen" %>
+          <%= link_to 'Delete', voorstel, method: :delete, data: { confirm: 'Are you sure?' }, :class => "linkvoorstellen" %>
       </td>
     </tr>
   </table>

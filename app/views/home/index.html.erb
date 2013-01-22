@@ -1,59 +1,11 @@
-<div id="tabs">
-    <ul>
-        <li class="span4">
-        	<a href="#tabs-1">
-	        	<div class"block">
-	        		<div id="image">
-	        			<%=image_tag "/assets/moulin.jpg", :class => "img"%>
-		        		<br><br>
-		        	</div>
-		        	<div id="text">
-		        		Locatie voorstellen
-	        		</div>
-	        	</div>
-        	</a>
-        </li>
-        <li class="span4">
-        	<a href="#tabs-2">
-	        	<div class"block">
-	        		<div id="image">
-	        			<%=image_tag "/assets/defense.jpg", :class => "img"%>
-		        		<br><br>
-		        	</div>
-	        		<div id="text">
-		        		Planning
-	        		</div>
-	        	</div>
-        	</a>
-        </li>
-        <li class="removemargin span4">
-        	<a href="#tabs-3">
-	        	<div class"block">
-	        		<div id="image">
-		        		<%=image_tag "/assets/arc.jpg", :class => "img"%>
-		        		<br><br>
-		        	</div>
-	        		<div id="text">
-		        		To do
-	        		</div>
-	        	</div>
-        	</a>
-        </li>
-    </ul>
-    <div id="tabs-1">
-        <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
-    </div>
-    <div id="tabs-2">
-        <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
-    </div>
-    <div id="tabs-3">
-    	<ul class="todo">
-    		<li class="todoli">Dansen onder de Eifelltoren</li>
-    		<li class="todoli">Dansen onder de Eifelltoren</li>
-    		<li class="todoli">Dansen onder de Eifelltoren</li>
-    		<li class="todoli">Dansen onder de Eifelltoren</li>
-    		<li class="todoli">Dansen onder de Eifelltoren</li>
-    		<li class="todoli">Dansen onder de Eifelltoren</li>
-    	</ul>
-    </div>
+<div class="contenttext">
+	<% if user_signed_in? %>
+
+	<h2><br>Welkom op explorer!<br></h2>
+
+	<% else %>
+	
+	<h2><br>Welkom op world explorer! Gelieve in te loggen om de site te bezichtigen<br></h2>
+
+	<% end %>
 </div>
