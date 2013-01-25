@@ -12,15 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name, 'Uw naam' %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :place %><br />
+    <%= f.label :place, 'De plaats die u wilt voorstellen' %><br />
     <%= f.text_field :place %>
   </div>
   <div class="field">
-    <%= f.label :time %><br />
+    <%= f.label :time, 'De tijdsspanne die u voorziet' %><br />
     <%= f.select :time, [['0:30'],
                         ['1:00'],
                         ['1:30'],
@@ -33,10 +33,10 @@
                         ['5:00']] %>
   </div>
   <div class="field">
-    <%= f.label :content %><br />
+    <%= f.label :content, 'Opmerkingen bij het voorstel' %><br />
     <%= f.text_area :content %>
   </div>
   <div class="actions">
-    <%= f.submit "Stel voor", :class =>'btn btn-medium' %>
+    <%= f.submit "Stel voor", :class =>'btn btn-medium btn-inverse' %>
   </div>
 <% end %>
